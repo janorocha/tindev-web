@@ -4,7 +4,7 @@ import api from '../services/api'
 import logo from '../assets/logo.svg'
 
 
-export default function Login( {history} ) {
+export default function Login({ history }) {
     const [username, setUsername] = useState('')
 
     async function handleSubmit(e) {
