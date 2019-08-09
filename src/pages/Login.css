@@ -22,7 +22,7 @@
     color: #666;
 }
 
-.login-container form input :: placeholder {
+.login-container form input::placeholder {
     color: #999;
 }
 
