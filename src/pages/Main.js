@@ -45,25 +45,25 @@ export default function Main({ match }) {
             <img src={logo} alt="Tindev" />
             </Link>
                 { users.length > 0 ? (
-            <ul>
-            {users.map(user => (
-                <li key={user._id}>
-                    <img src={user.avatar} alt={user.name} />
-                    <footer>
-                        <strong>{user.name}</strong>
-                        <p>Improve asasdas adsasdasd asdasdasd asdasdas asdasdas asdasdasd asdadas asdadas dasdasd asdasdas sadasdasd asdadsad asdasdsad </p>
-                    </footer>
-                    <div className="buttons">
-                        <button type="button" onClick={() => handDislike(user._id)}>
-                            <img src={dislike} alt="Dislike" />
-                        </button>
-                        <button type="button" onClick={() => handLike(user._id)}>
-                            <img src={like} alt="Like" />
-                        </button>
-                    </div>
-                </li>
-                ))}
-            </ul>
+                    <ul>
+                    {users.map(user => (
+                        <li key={user._id}>
+                            <img src={user.avatar} alt={user.name} />
+                            <footer>
+                                <strong>{user.name}</strong>
+                                <p>{user.bio}</p>
+                            </footer>
+                            <div className="buttons">
+                                <button type="button" onClick={() => handDislike(user._id)}>
+                                    <img src={dislike} alt="Dislike" />
+                                </button>
+                                <button type="button" onClick={() => handLike(user._id)}>
+                                    <img src={like} alt="Like" />
+                                </button>
+                            </div>
+                        </li>
+                        ))}
+                    </ul>
                 ) : (
                     <div className="empty">Acabou :(</div>
                 ) }
